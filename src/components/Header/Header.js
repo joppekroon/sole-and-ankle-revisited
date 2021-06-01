@@ -21,9 +21,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Side>
+        <LogoWrapper>
           <Logo />
-        </Side>
+        </LogoWrapper>
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -32,8 +32,6 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
-        <Side />
-        
         <MobileButtons>
           <UnstyledButton>
             <Icon id="shopping-bag" strokeWidth={2} color={COLORS.gray[900]} size="24" />
@@ -48,6 +46,7 @@ const Header = () => {
             <VisuallyHidden>Menu</VisuallyHidden>
           </UnstyledButton>
         </MobileButtons>
+        <Filler />
       </MainHeader>
 
       <MobileMenu
@@ -68,6 +67,7 @@ const MainHeader = styled.div`
   @media ${QUERIES.tabletAndSmaller} {
     border-top: 4px solid ${COLORS.gray[900]};
     align-items: center;
+    justify-content: space-between;
   }
   
   @media ${QUERIES.phoneAndSmaller} {
@@ -85,8 +85,20 @@ const Nav = styled.nav`
   }
 `;
 
-const Side = styled.div`
+const LogoWrapper = styled.div`
   flex: 1;
+  
+  @media ${QUERIES.tabletAndSmaller} {
+    flex: revert;
+  }
+`;
+
+const Filler = styled.div`
+  flex: 1;
+  
+  @media ${QUERIES.tabletAndSmaller} {
+    display: none;
+  }
 `;
 
 const NavLink = styled.a`
