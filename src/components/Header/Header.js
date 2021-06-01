@@ -7,6 +7,7 @@ import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 import UnstyledButton from "../UnstyledButton";
 import Icon from "../Icon";
+import VisuallyHidden from '../VisuallyHidden';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -36,12 +37,15 @@ const Header = () => {
         <MobileButtons>
           <UnstyledButton>
             <Icon id="shopping-bag" strokeWidth={2} color={COLORS.gray[900]} size="24" />
+            <VisuallyHidden>Open cart</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
             <Icon id="search" strokeWidth={2} color={COLORS.gray[900]} size="24" />
+            <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
-          <UnstyledButton onclick={() => setShowMobileMenu(true)}>
+          <UnstyledButton aria-haspopup="menu" onclick={() => setShowMobileMenu(true)}>
             <Icon id="menu" strokeWidth={2} color={COLORS.gray[900]} size="24" />
+            <VisuallyHidden>Menu</VisuallyHidden>
           </UnstyledButton>
         </MobileButtons>
       </MainHeader>
