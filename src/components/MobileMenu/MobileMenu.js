@@ -69,8 +69,10 @@ const Content = styled(DialogContent)`
 
 const CloseButtonWrapper = styled.div`
   position: absolute;
-  top: 26px;
-  right: 16px;
+  top: 10px;
+  right: 0px;
+  
+  padding: 16px;
 `;
 
 const Filler = styled.div`
