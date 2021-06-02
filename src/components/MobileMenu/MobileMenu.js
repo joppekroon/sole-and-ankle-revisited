@@ -78,11 +78,8 @@ const Filler = styled.div`
 `;
 
 const Navigation = styled.nav`
-  flex: 0;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
 `;
 
