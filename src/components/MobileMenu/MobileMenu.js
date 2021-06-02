@@ -80,7 +80,7 @@ const Filler = styled.div`
 const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 `;
 
 const NavLink = styled.a`
