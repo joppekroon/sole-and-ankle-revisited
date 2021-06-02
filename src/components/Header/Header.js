@@ -18,7 +18,7 @@ const Header = () => {
   // <button onClick={() => setShowMobileMenu(true)}>
 
   return (
-    <header>
+    <Wrapper>
       <SuperHeader />
       <MainHeader>
         <LogoWrapper>
@@ -53,9 +53,13 @@ const Header = () => {
         isOpen={showMobileMenu}
         onDismiss={() => setShowMobileMenu(false)}
       />
-    </header>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.header`
+  overflow: auto;
+`;
 
 const MainHeader = styled.div`
   display: flex;
@@ -77,7 +81,12 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(
+    1.5rem,
+    7vw - 2.75rem,
+    3rem
+  );
+  
   margin: 0px 48px;
   
   @media ${QUERIES.tabletAndSmaller} {
