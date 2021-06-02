@@ -41,7 +41,7 @@ const Header = () => {
             <Icon id="search" strokeWidth={2} color={COLORS.gray[900]} size="24" />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
-          <UnstyledButton aria-haspopup="menu" onclick={() => setShowMobileMenu(true)}>
+          <UnstyledButton aria-haspopup="menu" onClick={() =>  setShowMobileMenu(true)}>
             <Icon id="menu" strokeWidth={2} color={COLORS.gray[900]} size="24" />
             <VisuallyHidden>Menu</VisuallyHidden>
           </UnstyledButton>
